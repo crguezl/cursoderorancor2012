@@ -1,0 +1,148 @@
+Ancor Cruz
+ancorcruz@gmail.com
+becario  OSL
+hizo LHP hace 4 años
+evaluacion: asistencia
+haremos un proyecto RoR
+el ultimo dia mejora de la aplicacion
+nota dependiendo de las mejoras
+
+1. Ruby
+2. conceptos de Rails
+3. Aplicacion simple
+4. Si da tiempo texting sobre RoR
+
+Ruby: Que es
+   Reflexivo
+   Dinamico
+   "monkey patching": abrir una clase e introducir cambios
+   Mixings
+   Metaprogramacion
+   
+
+   Convenciones
+        snake_case: __
+        CONSTANTES con mayusculas si estan dento de un ambito
+        $global
+        locales se asignan antes de suarlas
+        de instancia y clase son nil antes de asignarlas
+        while | until 
+          ...
+        end
+        sólo los fixnum son pasados por valor
+        Poetry mode: omititr parentesis y corchetes
+        OOP
+         5.methods 
+        Herencia
+        Mixings
+        yield()
+          envia el codigo al objeto: el codigo es un parametro
+        vim en github de ancor
+
+
+RUBY ON RAILS
+
+  Framework web
+  Arquitectura MVC
+  Licencia MIT
+  Rico ecosistema
+
+  PRINCIPIOS
+    David  "Basecamp"
+    DRY
+    Convention over Configuration
+    Felicidad
+
+    firefox <----> internet <---> server
+    HTML+CSS
+
+    server: apache + ruby rails + base de datos
+
+    presentacion + persistencia + logica: capas
+
+    MVC. Esquema
+
+           
+    VISTAS:
+       Markup HTML/HAML + Interpolacion
+       HAML = HTML mejorado
+       No escribas logica en tus vistas
+       para eso esta el modelo
+
+        * Views: pedazo de HTML
+        * Layouts: plantilla en la que se renderiza
+        * partials: tipo de vista especial para reciclar, p.ej. un formulario y se llama como una "subrutina"
+        * Helpers: métodos que ayudan a mantener mas limpias las vistas. Ej. link_to, son también subs
+
+    REST
+       Representational State Transfer
+       Cada mensaje HTTP contiene toda la informacion necesaria
+       El server no necesita saber/rastrear el pasado (y el cliente)
+       Operaciones: GET, PUT, POST, DELETE
+       Recurso direccionables por una URI
+       Hipermedios: Respuestas siempre incluyen hipervinculos
+
+       Los sistemas que cumplen con REST se dicen restfull
+
+    LOS CONTROLADORES
+       Rutas: Cada request del cliente al server lo hace con una ruta 
+       y la ruta
+
+          GET  /tasks/4 <--- recurso + identificador de recurso
+          POST /tasks
+          PUT  /tasks/4
+          DELETE /tasks/4
+
+       el enrutador se encarga de traducir eso
+                   controller
+          GET /tasks/4/edit  # action is edit, 4 is id, tasks is the controller (expands to 'tasks_controller.rb')
+          :controller => tasks,
+          :action => 'edit', :id  => 4
+
+          params[:id]  # 4
+
+     LOS MODELOS
+
+     Contienen la lógica de nuestra aplicación
+
+        id           name        last_name    .......
+         1           John        Smith        .......
+         2           Luke                     .......
+         3           Darth       Vader        .......
+
+     Active Records se encarga de acceder a la BBDD
+                    nos da validaciones
+                    "    "  consultas
+                    "    "  relaciones 1-1, 1-muchos
+                    scopes (where de SQL)
+
+                    User  1---> * Post (user_id)
+                    Tiene varias vistas normalemente (CRUD Create etc.)
+    ENTORNOS
+       Entorno de Desarrollo: Cada clase es recargada en cada request
+       Entorno de Test: 
+       Produccion: mundo real, caches, no se recargan las clases, etc.
+       Se pueden añadir ams entornos, p. ej. staging que es como un ensayo de producción
+
+     RECURSOS
+        Gemas
+        Rubygems
+        Bundler es una gema se encarga de facilitar la gestion de las gemas que usamos en nuestra aplicacion RoR
+          "esta gema es para test y desarrollo", etc. Es un Rubygem para RoR
+        Plugins (deprecated)
+        RVM
+          'gemsets' para un proyecto tenemos un conjunto definido de gemas
+        tareas rake
+        Generadores
+
+
+
+
+
+
+
+
+
+   
+
+
