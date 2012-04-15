@@ -6,7 +6,6 @@ class Dictionary
   end
 
   def add(h)
-    # @words[word] = definition
     @words.merge!(h) # a
   end
 
@@ -18,6 +17,10 @@ class Dictionary
     @words.delete word  # no bang!
   end
 
+  def to_s
+    "DICTIONARY\n" +
+    (@words.map { |x, y| "#{x} => #{y}"}).join("\n")
+  end
 end
 
 if $0 ==  __FILE__ then
@@ -25,7 +28,7 @@ if $0 ==  __FILE__ then
   d.add('sillón' => ' Un sitio para descansar')
   d.add 'gallina' => 'animal que pone huevos'
   d.add 'perro' => 'fiel animal que ladra'
-  puts d.inspect
+  puts d
   d.remove('sillón')
-  puts d.inspect
+  puts d
 end
