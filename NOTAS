@@ -64,6 +64,9 @@ RUBY ON RAILS
     MVC. Esquema
     Models
         Models represent knowledge. 
+        Guarda el estado de la aplicación. Normalemnte se guarda 
+        en la BBDD. También realiza la validación de las restricciones
+        sobre los datos.
 
     Views
         It acts as a presentation filter.
@@ -74,13 +77,19 @@ RUBY ON RAILS
 
 
     Controllers
-      the Controller is responsible for orchestrating the whole
-      process of handling a request in Rails, though it normally
+      The Controller is responsible for orchestrating the whole
+      process of handling a request , though it normally
       hands off any heavy code to the Model. But then, when it’s
       time to send a response back to the user, the Controller hands
       things off to the View.
 
            
+      En una aplicación Rails primero se envía una solicitud entrante a un router,
+      que decide donde se debe enviar la solicitud y como se debería analizar la 
+      solicitud. Esta fase identifica un método en particular, denominado "acción"
+      que reside en el controlador. La acción trabaja con los datos y el modelo 
+      y prepara la información que la vista mostrará.
+
     VISTAS:
        Markup HTML/HAML + Interpolacion
        HAML = HTML mejorado
