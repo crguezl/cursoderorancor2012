@@ -1,16 +1,16 @@
-Ancor Cruz
-ancorcruz@gmail.com
-becario  OSL
-LHP 4 años 2008 aprox.
-evaluacion: asistencia
-haremos un proyecto RoR
-el ultimo dia mejora de la aplicacion
-nota dependiendo de las mejoras
+Profesor: Ancor Cruz ancorcruz at gmail.com
+CV: becario  OSL
+    LHP 4 años 2008 aprox.
+Evaluacion: asistencia
+  Haremos un proyecto RoR
+  el ultimo dia mejora de la aplicacion
+  nota dependiendo de las mejoras
 
-1. Ruby
-2. conceptos de Rails
-3. Aplicacion simple
-4. Si da tiempo texting sobre RoR
+Indice:
+  1. Ruby
+  2. conceptos de Rails
+  3. Aplicacion simple
+  4. Si da tiempo texting sobre RoR
 
 Ruby: Que es
    Reflexivo
@@ -42,10 +42,11 @@ Ruby: Que es
 
 RUBY ON RAILS
 
-  Framework web
-  Arquitectura MVC
-  Licencia MIT
-  Rico ecosistema
+  Que es:
+    Framework web
+    Arquitectura MVC
+    Licencia MIT
+    Rico ecosistema
 
   PRINCIPIOS
     David  "Basecamp"
@@ -61,6 +62,23 @@ RUBY ON RAILS
     presentacion + persistencia + logica: capas
 
     MVC. Esquema
+    Models
+        Models represent knowledge. 
+
+    Views
+        It acts as a presentation filter.
+        If the response is a full-blown view, Rails also does some
+        extra work to wrap the view in a layout and possibly to
+        pull in partial views.
+        Partials are very useful in rendering collections.
+
+
+    Controllers
+      the Controller is responsible for orchestrating the whole
+      process of handling a request in Rails, though it normally
+      hands off any heavy code to the Model. But then, when it’s
+      time to send a response back to the user, the Controller hands
+      things off to the View.
 
            
     VISTAS:
@@ -144,5 +162,24 @@ RUBY ON RAILS
 
 
    
+
+
+TAREA:
+
+FakeFacebook
+   Entidades
+     Users
+     Posts (atributo: user_id)
+     Comments (atributo: user_id)
+     Photos (atributo: user_id)
+
+   Relaciones:
+     Usuario 1 ---> * Posts 1 ----> * Comments
+        1
+        |
+        v
+        *
+      Photos
+     Usuario 1 ---> * Comments
 
 
